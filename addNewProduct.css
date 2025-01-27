@@ -1,0 +1,516 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+.dashboard-container {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background: #FF416C;
+    background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
+    background: linear-gradient(to right, #FF4B2B, #FF416C);
+    border-radius: 30px;
+    padding: 20px;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1),
+        -10px -10px 30px rgba(255, 255, 255, 0.7);
+}
+
+.sidebar-top,
+.sidebar-bottom {
+    text-align: center;
+}
+
+.profile-section {
+    padding-bottom: 20px;
+}
+
+.profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.sidebar h2 {
+    margin: 10px 0 5px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.sidebar p {
+    color: #666;
+    font-size: 14px;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-nav li {
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 15px;
+    color: #333;
+    cursor: pointer;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.sidebar-nav li.active,
+.sidebar-nav li:hover {
+    font-weight: bold;
+}
+
+.sidebar-nav li i {
+    margin-right: 10px;
+}
+
+.logout {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 15px;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.logout:hover {
+    background: #FFE0E0;
+    box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.15),
+        inset -5px -5px 15px rgba(255, 255, 255, 0.7);
+}
+
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.dashboard-header {
+    display: flex;
+    align-items: center;
+    /* Align items vertically */
+    justify-content: space-between;
+    /* Separates the h1 and icon */
+    padding: 10px;
+    /* Adjust padding as needed */
+}
+
+.dashboard-header h1 {
+    margin: 0;
+    /* Adjust margin as needed */
+    flex-grow: 1;
+    /* Allows the h1 to take up available space pushing the icons to the right */
+    font-size: 40px;
+    letter-spacing: 1.5px;
+    /* Adjust the value as needed */
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.back-link a {
+    color: #0000EE;
+    text-decoration: none;
+}
+
+h1 {
+    color: #333;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.content {
+    display: flex;
+    margin-top: 20px;
+}
+
+.left-column,
+.right-column {
+    /* background-color: #fff; */
+    padding: 20px;
+    margin: 10px;
+    flex: 1;
+    /* box-shadow: 0 0 10px rgba(0,0,0,0.1); */
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #333;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.description-section {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 600px;
+    /* Adjust based on your layout */
+    margin: 20px;
+}
+
+.section-title {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 16px;
+}
+
+.input-group {
+    margin-bottom: 16px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.875rem;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    color: #333;
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+    color: #666;
+}
+
+.file-upload {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.upload-button {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.upload-button:hover {
+    background-color: #0056b3;
+}
+
+/* Adjust the textarea height as needed */
+.input-group textarea {
+    height: auto;
+    /* You can set a fixed height or make it auto */
+}
+
+.description-container,
+.category-container,
+.inventory-container,
+.product-images-container,
+.pricing-container {
+    background: #FFFFFF;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    margin-bottom: 15px;
+
+    .expiry-date{
+        margin-top: 5%;
+    }
+}
+
+.description-container h2 {
+    margin-bottom: 20px;
+}
+
+.product-name label,
+.business-description label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.product-name input,
+.business-description textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    /* Add space below the input/textarea */
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+}
+
+.business-description {
+    position: relative;
+    margin-top: 15px;
+}
+
+.upload-txt {
+    position: absolute;
+    right: 20px;
+    /* Align to the right */
+    top: 0;
+    /* Align with the label */
+    color: #0000EE;
+    text-decoration: none;
+}
+
+.upload-txt:hover {
+    text-decoration: underline;
+}
+
+/* Additional styling to make sure the link does not overlap with the textarea */
+
+
+/* Ensure the textarea starts on a new line */
+.business-description textarea {
+    display: block;
+    width: calc(100% - 20px);
+    /* Adjust width taking padding into account */
+    height: 150px;
+    resize: none;
+}
+
+.category-container h2 {
+    margin-bottom: 20px;
+    /* Adjust as needed */
+}
+
+.dropdown {
+    margin-bottom: 10px;
+    /* Adjust spacing between dropdowns as needed */
+}
+
+.dropdown label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.dropdown select {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    /* Adjust as needed */
+    cursor: pointer;
+}
+
+
+
+/* For disabled select box styling if needed */
+.dropdown select:disabled {
+    background-color: #EEEEEE;
+    cursor: not-allowed;
+}
+
+
+.image-upload-container {
+    display: flex;
+    gap: 10px;
+    /* Adjust as necessary */
+}
+
+.upload-box {
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    width: 100%;
+}
+
+.upload-box input[type="file"] {
+    display: none;
+    /* Hide the default input */
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.image-container img {
+    border-radius: 8px;
+    width: 100px;
+    /* Adjust as necessary */
+    height: 100px;
+    /* Adjust as necessary */
+    object-fit: cover;
+}
+
+.image-action {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+.image-container:hover .image-action {
+    visibility: visible;
+    opacity: 1;
+}
+
+.custom-file-upload {
+    color: #0000EE;
+    font-weight: bold;
+}
+
+.price-input {
+    display: flex;
+    align-items: center;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+}
+
+.currency-symbol {
+    padding: 8px;
+    background-color: #EEEEEE;
+    border-right: 1px solid #CCCCCC;
+    user-select: none;
+    /* The following line ensures that the symbol does not take any selection */
+}
+
+.price-input input {
+    flex: 1;
+    border: none;
+    padding: 8px;
+    font-size: 16px;
+    /* Adjust font size as needed */
+}
+
+.price-input input:focus {
+    /* Removes the outline on the input when it is in focus */
+    outline: none;
+}
+
+/* Makes sure the input field doesn't have spinner buttons */
+.price-input input[type='number']::-webkit-inner-spin-button,
+.price-input input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.price-input input[type='number'] {
+    -moz-appearance: textfield;
+    /* Removes spinner buttons in Firefox */
+}
+
+/* Optional: Disables the ability to manually change the number in the input field */
+.price-input input[type='number']:read-only {
+    background-color: white;
+    /* Keeps the background white */
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Adjust the space between buttons */
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc; /* Light gray border */
+    background-color: #fff; /* White background */
+    cursor: pointer;
+    outline: none;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn.discard {
+    /* Additional styles if needed */
+}
+
+.btn.add-product {
+    color: #fff; /* White text */
+    background-color: #007BFF; /* Bootstrap primary color blue */
+    border-color: #007BFF; /* Same as background */
+}
+
+.btn.add-product:hover {
+    background-color: #0056b3; /* Darken blue on hover */
+    border-color: #0056b3;
+}
+
+/* Focusing styles for accessibility */
+.btn:focus {
+    outline: 2px dotted #5b9dd9;
+    outline-offset: 2px;
+}
+
+#imagePreview {
+    width: 200px;  /* Width of the image */
+    height: 200px; /* Height of the image */
+    object-fit: contain; /* Ensures the whole image fits within the box without cropping */
+    display: block; /* Initially hidden */
+    margin-top: 10px; /* Space between the upload input and the image */
+    background: #f0f0f0; /* Optional: background color of the image container */
+    border-radius: 5px; /* Optional: for rounded corners */
+}
+
+/* Container for image previews */
+.image-previews {
+    width: 200px;  /* Width of the image */
+    height: 200px; /* Height of the image */
+    display: flex; /* Use flexbox to align images horizontally */
+    flex-wrap: wrap; /* Wrap images to the next line if they exceed container width */
+    gap: 10px; /* Space between images */
+}
+
+/* Individual image preview */
+/* Individual image preview */
+.preview-image {
+    max-width: 100px;  /* Maximum width of each image */
+    max-height: 100px; /* Maximum height of each image */
+    background: #f0f0f0; /* Optional: background color of the image container */
+    border-radius: 5px; /* Optional: for rounded corners */
+}

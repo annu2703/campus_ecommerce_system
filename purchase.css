@@ -1,0 +1,135 @@
+/* Reset some default styles */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+.dashboard-container {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background: #FF416C;
+    background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
+    background: linear-gradient(to right, #FF4B2B, #FF416C);
+    border-radius: 30px;
+    padding: 20px;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1),
+        -10px -10px 30px rgba(255, 255, 255, 0.7);
+}
+
+.sidebar-top,
+.sidebar-bottom {
+    text-align: center;
+}
+
+.profile-section {
+    padding-bottom: 20px;
+}
+
+.profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.sidebar h2 {
+    margin: 10px 0 5px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.sidebar p {
+    color: #666;
+    font-size: 14px;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-nav li {
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 15px;
+    color: #333;
+    cursor: pointer;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.sidebar-nav li.active,
+.sidebar-nav li:hover {
+    font-weight: bold;
+}
+
+.sidebar-nav li i {
+    margin-right: 10px;
+}
+
+.logout {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 15px;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.logout:hover {
+    background: #FFE0E0;
+    box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.15),
+        inset -5px -5px 15px rgba(255, 255, 255, 0.7);
+}
+
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.dashboard-header {
+    display: flex;
+    align-items: center;
+    /* Align items vertically */
+    justify-content: space-between;
+    /* Separates the h1 and icon */
+    padding: 10px;
+    /* Adjust padding as needed */
+}
+
+.dashboard-header h1 {
+    margin: 0;
+    /* Adjust margin as needed */
+    flex-grow: 1;
+    /* Allows the h1 to take up available space pushing the icons to the right */
+    font-size: 40px;
+    letter-spacing: 1.5px;
+    /* Adjust the value as needed */
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.payment-container img {
+    height: 300px;
+}
+
+.payment-container{
+    text-align: center;
+}
